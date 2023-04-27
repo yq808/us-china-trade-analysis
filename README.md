@@ -1,12 +1,12 @@
 # DSCI 510 Final Project
 
 ### Table of Contents
-[Description](#description)
-[Requirements](#requirements)
-[Data Sources](#data-sources)
-[Running the Code](#running-the-code)
-[Analyses](#analyses)
-[Further Extensibility](#further-extensibility)
+[Description](#description)<br>
+[Requirements](#requirements)<br>
+[Data Sources](#data-sources)<br>
+[Running the Code](#running-the-code)<br>
+[Analyses](#analyses)<br>
+[Further Extensibility](#further-extensibility)<br>
 [Maintainability and Drawbacks](#maintainability-and-drawbacks)
 
 ### Description
@@ -52,11 +52,13 @@ I am performing a search on The New York Times website for relevant articles wit
 The code can be run in three modes: default, scrape and static. It is recommended to run the code in default mode first, then either scrape mode or static mode. However, this is not necessary.
 
 1. **Default mode**: To run the code in default mode, type command - `python3 Alison_Huang_HW4.py`
-In this mode, the program performs compiling of trade data into one trade dataset file, and then uses the monthly periods given from the trade dataset to scrape data from The New York Times and query the currency API. All the data is then merged into a single dataset. The final dataset is saved to the file "dsci_510_dataset.csv" in the same directory. The first 5 results for largest positive change in exchange rate is printed to the user. This should take around 6 minutes to run.
+<br>In this mode, the program performs compiling of trade data into one trade dataset file, and then uses the monthly periods given from the trade dataset to scrape data from The New York Times and query the currency API. All the data is then merged into a single dataset. The final dataset is saved to the file "dsci_510_dataset.csv" in the same directory. The first 5 results for largest positive change in exchange rate is printed to the user. This should take around 6 minutes to run.
+
 2. **Scrape mode**: To run the code in scrape mode, type command - `python3 Alison_Huang_HW4.py --scrape`
-In this mode, only 5 of the most recent available months are taken from the intermediate trade dataset and are used for web scraping and API request purposes. These results are generated and printed at each step, along with their size. This should take around 1 minute to run.
+<br>In this mode, only 5 of the most recent available months are taken from the intermediate trade dataset and are used for web scraping and API request purposes. These results are generated and printed at each step, along with their size. This should take around 1 minute to run.
+
 3. **Static mode**: To run the code in static mode, type command - `python3 Alison_Huang_HW4.py --static datasets/dsci_510_dataset.csv`
-In this mode, the code reads the "dsci_510_dataset.csv" dataset that was generated using default mode. It prints the dimensions of the whole dataset, a few descriptive statistics, as well as actual data for the 5 most recent available months. This should take around a few seconds to run.
+<br>In this mode, the code reads the "dsci_510_dataset.csv" dataset that was generated using default mode. It prints the dimensions of the whole dataset, a few descriptive statistics, as well as actual data for the 5 most recent available months. This should take around a few seconds to run.
 
 ### Analyses
 Here are some analyses generated from the final dataset.
@@ -64,10 +66,10 @@ The content and dimensions of the final data.
 ![](img/df.png)
 
 **Some descriptive statistics:**
-Mean of export value: 10.066580006410257
-Mean of import value: 40.4543876474359
-Mean of exchange rate: 6.548442307692308
-Mean of articles written: 86.08974358974359
+<br>Mean of export value: 10.066580006410257
+<br>Mean of import value: 40.4543876474359
+<br>Mean of exchange rate: 6.548442307692308
+<br>Mean of articles written: 86.08974358974359
 
 Visualization of export value, import value, and exchange rate from 2010-2022.
 ![A line graph showing export value, import value, and exchange rate from 2010-2022.](img/line_graph.png)
