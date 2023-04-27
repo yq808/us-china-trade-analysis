@@ -39,18 +39,17 @@ I am performing a search on The New York Times website for relevant articles wit
 
 ![Flowchart showing how the data sources relate to one another](img/flowchart.png)
 
-### Running the Code:
+### Running the Code
 The code can be run in three modes: default, scrape and static. It is recommended to run the code in default mode first, then either scrape mode or static mode. However, this is not necessary.
 
 1. **Default mode**: To run the code in default mode, type command - `python3 Alison_Huang_HW4.py`
+<br>In this mode, the program performs compiling of trade data into one trade dataset file, and then uses the monthly periods given from the trade dataset to scrape data from The New York Times and query the currency API. All the data is then merged into a single dataset. The final dataset is saved to the file "dsci_510_dataset.csv" in the same directory. The first 5 results for largest positive change in exchange rate is printed to the user. This should take around 6 minutes to run.
 
-In this mode, the program performs compiling of trade data into one trade dataset file, and then uses the monthly periods given from the trade dataset to scrape data from The New York Times and query the currency API. All the data is then merged into a single dataset. The final dataset is saved to the file "dsci_510_dataset.csv" in the same directory. The first 5 results for largest positive change in exchange rate is printed to the user. This should take around 6 minutes to run.
 2. **Scrape mode**: To run the code in scrape mode, type command - `python3 Alison_Huang_HW4.py --scrape`
+<br>In this mode, only 5 of the most recent available months are taken from the intermediate trade dataset and are used for web scraping and API request purposes. These results are generated and printed at each step, along with their size. This should take around 1 minute to run.
 
-In this mode, only 5 of the most recent available months are taken from the intermediate trade dataset and are used for web scraping and API request purposes. These results are generated and printed at each step, along with their size. This should take around 1 minute to run.
 3. **Static mode**: To run the code in static mode, type command - `python3 Alison_Huang_HW4.py --static datasets/dsci_510_dataset.csv`
-
-In this mode, the code reads the "dsci_510_dataset.csv" dataset that was generated using default mode. It prints the dimensions of the whole dataset, a few descriptive statistics, as well as actual data for the 5 most recent available months. This should take around a few seconds to run.
+<br>In this mode, the code reads the "dsci_510_dataset.csv" dataset that was generated using default mode. It prints the dimensions of the whole dataset, a few descriptive statistics, as well as actual data for the 5 most recent available months. This should take around a few seconds to run.
 
 ### Analyses
 Here are some analyses generated from the final dataset.
@@ -73,12 +72,12 @@ A regression analysis conducted on the relationship between exchange rate change
 I was interested in finding out what happened during months where there was a large fluctuation in exchange rate compared to the previous month. May 2022 had one of the highest increases in exchange rate. I scraped 30 of the most relevant articles on The New York Times related to US China trade in the month of May 2022, and generated a word cloud from the headline and blurb description from those articles. The word cloud provides an idea of the events that happened, which may explain the increase in exchange rate.
 ![Word cloud generated for May 2022.](img/wordcloud.png)
 
-### Further Extensibility:
+### Further Extensibility
 The code can be extended to analyze trade between other countries or more countries. For instance, Canada and Mexico are two more of the US' top trade partners. We can conduct further analyses with more countries in order to collect more tests and see if a solid relationships can be drawn between import and export values, exchange rates, and news popularity.
 
 Furthermore, instead of just getting the number of articles written each month with the keyword on The New York Times, we can scrape the headline and the article descriptions and conduct a sentiment analysis to analyze overall feelings about trade relations that month.
 
-### Maintainability and Drawbacks:
+### Maintainability and Drawbacks
 The currency exchange rate API that I am using is on the free plan which has a limit of 5000 requests per month. A request has to be sent for each monthly period to get information on historical requests. If the dataset grows larger or the code is executed many many times, the code will break as no more requests are allowed by the API.
 
 The API is sometimes unresponsive. To handle it, I have a backup exchange_rate.csv file within the datasets folder, which has already been prepopulated with exchange rates from previous API calls. If the API is unresponsive, then I will use the backup file instead. However in the event this happens, please execute the code again once the API is back up to be able to see how the complete program is meant to run!
