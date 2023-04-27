@@ -1,5 +1,14 @@
 # DSCI 510 Final Project
 
+### Table of Contents
+[Description](#description)
+[Requirements](#requirements)
+[Data Sources](#data-sources)
+[Running the Code](#running-the-code)
+[Analyses](#analyses)
+[Further Extensibility](#further-extensibility)
+[Maintainability and Drawbacks](#maintainability-and-drawbacks)
+
 ### Description
 The aim of the project is to look at the relationship between trade, exchange rate, and news coverage between the United States and China. I am concerned with how fluctuations in trade such as export and import values are correlated with fluctuations in exchange rate between the United States Dollar and Chinese Yuan. For instance, an appreciation of a currency makes exports more expensive and imports less expensive, and countries might adjust accordingly. Is this behavior observed in real life?
 
@@ -43,13 +52,11 @@ I am performing a search on The New York Times website for relevant articles wit
 The code can be run in three modes: default, scrape and static. It is recommended to run the code in default mode first, then either scrape mode or static mode. However, this is not necessary.
 
 1. **Default mode**: To run the code in default mode, type command - `python3 Alison_Huang_HW4.py`
-<br>In this mode, the program performs compiling of trade data into one trade dataset file, and then uses the monthly periods given from the trade dataset to scrape data from The New York Times and query the currency API. All the data is then merged into a single dataset. The final dataset is saved to the file "dsci_510_dataset.csv" in the same directory. The first 5 results for largest positive change in exchange rate is printed to the user. This should take around 6 minutes to run.
-
+In this mode, the program performs compiling of trade data into one trade dataset file, and then uses the monthly periods given from the trade dataset to scrape data from The New York Times and query the currency API. All the data is then merged into a single dataset. The final dataset is saved to the file "dsci_510_dataset.csv" in the same directory. The first 5 results for largest positive change in exchange rate is printed to the user. This should take around 6 minutes to run.
 2. **Scrape mode**: To run the code in scrape mode, type command - `python3 Alison_Huang_HW4.py --scrape`
-<br>In this mode, only 5 of the most recent available months are taken from the intermediate trade dataset and are used for web scraping and API request purposes. These results are generated and printed at each step, along with their size. This should take around 1 minute to run.
-
+In this mode, only 5 of the most recent available months are taken from the intermediate trade dataset and are used for web scraping and API request purposes. These results are generated and printed at each step, along with their size. This should take around 1 minute to run.
 3. **Static mode**: To run the code in static mode, type command - `python3 Alison_Huang_HW4.py --static datasets/dsci_510_dataset.csv`
-<br>In this mode, the code reads the "dsci_510_dataset.csv" dataset that was generated using default mode. It prints the dimensions of the whole dataset, a few descriptive statistics, as well as actual data for the 5 most recent available months. This should take around a few seconds to run.
+In this mode, the code reads the "dsci_510_dataset.csv" dataset that was generated using default mode. It prints the dimensions of the whole dataset, a few descriptive statistics, as well as actual data for the 5 most recent available months. This should take around a few seconds to run.
 
 ### Analyses
 Here are some analyses generated from the final dataset.
