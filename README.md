@@ -1,13 +1,13 @@
 # DSCI 510 Final Project
 
 ### Table of Contents
-[Description](#description)<br>
-[Requirements](#requirements)<br>
-[Data Sources](#data-sources)<br>
-[Running the Code](#running-the-code)<br>
-[Analyses](#analyses)<br>
-[Further Extensibility](#further-extensibility)<br>
-[Maintainability and Drawbacks](#maintainability-and-drawbacks)
+- [Description](#description)
+- [Requirements](#requirements)
+- [Data Sources](#data-sources)
+- [Running the Code](#running-the-code)
+- [Analyses](#analyses)
+- [Further Extensibility](#further-extensibility)
+- [Maintainability and Drawbacks](#maintainability-and-drawbacks)
 
 ### Description
 The aim of the project is to look at the relationship between trade, exchange rate, and news coverage between the United States and China. I am concerned with how fluctuations in trade such as export and import values are correlated with fluctuations in exchange rate between the United States Dollar and Chinese Yuan. For instance, an appreciation of a currency makes exports more expensive and imports less expensive, and countries might adjust accordingly. Is this behavior observed in real life?
@@ -24,7 +24,7 @@ The following packages need to be installed before executing the code:
 2. requests
 3. BeautifulSoup
 
-To install the above packages, please run the following command in the terminal:
+To install the above packages, please run the following command in the terminal:<br>
 `pip install -r requirements.txt`
 
 The following modules must be imported before executing the code:
@@ -44,7 +44,7 @@ On a basic user account, the user is only allowed to show results for 12 months 
 2. [CurrencyBeacon API](https://currencybeacon.com/api-documentation)
 This is an API that returns historical exchange rates for the Chinese Yuan in reference to the United States Dollar (USD). For instance, a value of 6.5 means that 1 USD = 6.5 CNY. Using the requests library, I queried the API for the first of each month in the trade dataset and used the return JSON object to get the exchange rate. *Note: I removed my personal API key for usage limit reasons. Please register for an API key and replace it in the code if you would like the application to query the API. The code will still run without the API key via using backup data.*
 3. [The New York Times](https://www.nytimes.com/)
-I am performing a search on The New York Times website for relevant articles with keyword "US China Trade" within each given time period in the trade dataset. For instance, a url for August 2022 would be [https://www.nytimes.com/search?dropmab=false&endDate=20220831&query=us%20china%20trade&sort=best&startDate=20220801](https://www.nytimes.com/search?dropmab=false&endDate=20220831&query=us%20china%20trade&sort=best&startDate=20220801), which displays all articles for keyword "US China Trade" between August 1 and August 31, 2022. I am scraping the total number of articles found from the search for each month.
+I am performing a search on The New York Times website for relevant articles with keyword "US China Trade" within each given time period in the trade dataset. For instance, a url for August 2022 would be [https://www.nytimes.com/search?dropmab=false&endDate=20220831&query=us%20china%20trade&sort=best&startDate=20220801](https://www.nytimes.com/search?dropmab=false&endDate=20220831&query=us%20china%20trade&sort=best&startDate=20220801), which displays 86 articles for keyword "US China Trade" between August 1 and August 31, 2022. I am scraping the total number of articles found from the search for each month.
 
 ![Flowchart showing how the data sources relate to one another](img/flowchart.png)
 
@@ -66,10 +66,10 @@ The content and dimensions of the final data.
 ![](img/df.png)
 
 **Some descriptive statistics:**
-<br>Mean of export value: 10.066580006410257
-<br>Mean of import value: 40.4543876474359
-<br>Mean of exchange rate: 6.548442307692308
-<br>Mean of articles written: 86.08974358974359
+- *Mean of export value*: 10.066580006410257
+- *Mean of import value*: 40.4543876474359
+- *Mean of exchange rate*: 6.548442307692308
+- *Mean of articles written*: 86.08974358974359
 
 Visualization of export value, import value, and exchange rate from 2010-2022.
 ![A line graph showing export value, import value, and exchange rate from 2010-2022.](img/line_graph.png)
