@@ -13,7 +13,7 @@
 ### Description
 The aim of the project is to look at the relationship between trade, exchange rate, and news coverage between the United States and China.
 
-As an internaVonal student, I always keep a close eye on the currency exchange rates for the US Dollar and the Chinese Yuan as economic changes cause them to constantly fluctuate. I am concerned with how fluctuations in trade such as export and import values are correlated with fluctuations in exchange rate between the United States Dollar and Chinese Yuan. For instance, economic theory says that an appreciation of a currency makes exports more expensive and imports less expensive, and countries will adjust accordingly. However, is this behavior observed in real life?
+As an international student, I always keep a close eye on the currency exchange rates for the US Dollar and the Chinese Yuan as economic changes cause them to constantly fluctuate. I am concerned with how fluctuations in trade such as export and import values are correlated with fluctuations in exchange rate between the United States Dollar and Chinese Yuan. For instance, economic theory says that an appreciation of a currency makes exports more expensive and imports less expensive, and countries will adjust accordingly. However, is this behavior observed in real life?
 
 Additionally, fluctuations in trade and exchange rate might be indicative of activities happening between the two countries, such as growing tensions or new collaborations. To explore this, I am taking the amount of news coverage provided on trade between the two countries as an indicator of the extent of interaction between them.
 
@@ -96,7 +96,7 @@ Using the first dataset (trade data) and second dataset (exchange rate), I looke
 
 The table below shows linear regression analysis for variables in the final dataset. There was a very weak, posiVve relaVonship between export value change and exchange rate change, and import value change and exchange rate change. However, the p-values for both are higher than 0.05 level significance, so no significant observations can be drawn.
 
-| Variable 1           | Variable 2           | Pearson's            | p-value              |
+| Variable 1           | Variable 2           | Pearson's correlation| p-value              |
 | -------------------- | -------------------- | -------------------- | -------------------- |
 | Export value change  | Exchange rate change | 0.0088               | 0.9127               |
 | Export value change  | Exchange rate change | 0.0741               | 0.3577               |
