@@ -1,4 +1,4 @@
-# DSCI 510 Final Project
+# US-China Economic Trade Analysis
 
 ### Table of Contents
 - [Description](#description)
